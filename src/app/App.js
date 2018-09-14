@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import fire from "./config/Fire";
 
 class App extends Component {
 
@@ -13,17 +13,32 @@ class App extends Component {
       habilidades: '',
       idiomas: '',
       _id: '',
-      tasks: []
+      tasks: [],
+      user:{};
      
     };
     this.handleChange = this.handleChange.bind(this);
     this.addTask = this.addTask.bind(this);
+  }
+  componentDidMount(){
+    this.authListener();
   }
 
   handleChange(e) {
     const { name, value } = e.target;
     this.setState({
       [name]: value
+    });
+  }
+
+  authListener(){
+    fire.auth().onAuthStateChanged((user)=> {
+      if(user){
+        this.setState({user});
+      }
+      else{
+        this.setState({user:null});
+        }
     });
   }
 
@@ -124,6 +139,9 @@ class App extends Component {
 
   render() {
     return (
+
+      <div className="App">
+      {this.stat.user ? 
       <div>
         {/* NAVIGATION */}
         <nav className="light-blue darken-4">
@@ -133,6 +151,9 @@ class App extends Component {
             </div>
           </div>
         </nav>
+      }
+      :null
+    };
 
         <div className="container">
           <div className="row">
