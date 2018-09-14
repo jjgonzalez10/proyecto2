@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
-
-class App extends Component {
+class Pdf extends Component {
 
   constructor() {
     super();
@@ -173,7 +172,7 @@ class App extends Component {
                     </div>
 
                     <button type="submit" className="btn light-blue darken-4">
-                      Enviar
+                      Send
                     </button>
                   </form>
 
@@ -182,6 +181,7 @@ class App extends Component {
             </div>
             <div className="col s7">
               <table>
+                
                 <thead>
                   <tr>
                     <th>Informacion de Contacto</th>
@@ -192,11 +192,13 @@ class App extends Component {
                     <th>Idiomas</th>
                   </tr>
                 </thead>
+                
                 <tbody>
                   {
                     this.state.tasks.map(task => {
                       return (
                         <tr key={task._id}>
+                        
                           <td>{task.informacionContacto}</td>
                           <td>{task.resumen}</td>
                           <td>{task.educacion}</td>
@@ -204,6 +206,7 @@ class App extends Component {
                           <td>{task.habilidades}</td>
                           <td>{task.idiomas}</td>
                           <td>
+                        
                             <button onClick={() => this.deleteTask(task._id)} className="btn light-blue darken-4">
                               <i className="material-icons">delete</i>
                             </button>
@@ -230,4 +233,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Pdf;
