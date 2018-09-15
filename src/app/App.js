@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import fire from "./config/Fire";
+import fire from "../config/Firebase";
 
 class App extends Component {
 
@@ -14,7 +14,7 @@ class App extends Component {
       idiomas: '',
       _id: '',
       tasks: [],
-      user:{};
+      user:{},
      
     };
     this.handleChange = this.handleChange.bind(this);
@@ -141,8 +141,6 @@ class App extends Component {
     return (
 
       <div className="App">
-      {this.stat.user ? 
-      <div>
         {/* NAVIGATION */}
         <nav className="light-blue darken-4">
           <div className="container">
@@ -151,9 +149,6 @@ class App extends Component {
             </div>
           </div>
         </nav>
-      }
-      :null
-    };
 
         <div className="container">
           <div className="row">
