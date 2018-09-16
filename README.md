@@ -9,11 +9,11 @@ Nicolas Simmonds Samper
 
 Objetivos:
 
-*Hacer uso de nodejs, mongodb, express y React  
+*Aprender a usar nodejs, mongodb, express y React  
 
 *Diseñar e implementar una pagina web funcional que preste un servicio para las personas 
 
-*Aprender 
+*Aplicar todos los conocimientos adquiridos para el desarrollo de este proyecto
 
 
 Tecnologias usadas:
@@ -30,9 +30,9 @@ autores de la pagina : Jhon Jairo Gonzalez Melo https://github.com/jjgonzalez10
 
 Screenshot:
 
-<!--
+
 ![screenshot](https://raw.githubusercontent.com/jjgonzalez10/proyecto2/blob/master/images/Captura.PNG )
--->
+
 
 Steps:
 
