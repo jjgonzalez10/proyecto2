@@ -31,7 +31,7 @@ autores de la pagina : Jhon Jairo Gonzalez Melo https://github.com/jjgonzalez10
 Screenshot:
 
 
-![screenshot](https://raw.githubusercontent.com/jjgonzalez10/proyecto2/blob/master/images/Captura.PNG )
+![screenshot](https://raw.githubusercontent.com/jjgonzalez10/proyecto2/master/images/Captura.PNG )
 
 
 Steps:
