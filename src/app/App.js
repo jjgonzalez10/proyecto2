@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import {
   BrowserRouter as Router,
   Route,
@@ -26,6 +27,7 @@ class App extends Component {
          <Route path="/pdf" exact strict component={Resultado}/>
         </main>
         
+
 
       </div>
       </Router>
