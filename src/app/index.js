@@ -1,8 +1,24 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { render } from 'react-dom';
 
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  Switch
+} from 'react-router-dom'
+
+
 import App from './App';
+import Login from './Login';
+import Resultado from './Resultado';
+import Formularios from './Formularios';
 
-
-render(<App/>, document.getElementById('app'));
-
+render((
+  <Router>
+    <App>
+      <Route path="/formularios" exact strict component={Formularios}/>
+      <Route path="/pdf" exact strict component={Resultado}/>
+    </App>
+  </Router>
+), document.getElementById('app'));

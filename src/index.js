@@ -18,6 +18,7 @@ app.use(express.json());
 app.use('/api/formularios', require('./routes/task.routes'));
 app.use('/api/cliente', require('./routes/signin'));
 
+
 // Static Files
 app.use(express.static(path.join(__dirname, 'public')));;
 

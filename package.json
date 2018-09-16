@@ -16,7 +16,8 @@
     "express": "^4.16.3",
     "mongoose": "^5.1.4",
     "morgan": "^1.9.0",
-    "react-pdf": "^3.0.5"
+    "react-pdf": "^3.0.5",
+    "react-pdf-js": "^4.0.0-alpha.6"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
@@ -26,6 +27,7 @@
     "nodemon": "^1.17.5",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
+    "react-router-dom": "^4.3.1",
     "webpack": "^4.11.1",
     "webpack-cli": "^3.0.3"
   }

@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  Switch
+} from 'react-router-dom'
 
-class Pdf extends Component {
+class Formularios extends Component {
 
   constructor() {
     super();
@@ -172,7 +178,7 @@ class Pdf extends Component {
                     </div>
 
                     <button type="submit" className="btn light-blue darken-4">
-                      Send
+                      Enviar
                     </button>
                   </form>
 
@@ -181,7 +187,6 @@ class Pdf extends Component {
             </div>
             <div className="col s7">
               <table>
-                
                 <thead>
                   <tr>
                     <th>Informacion de Contacto</th>
@@ -192,13 +197,11 @@ class Pdf extends Component {
                     <th>Idiomas</th>
                   </tr>
                 </thead>
-                
                 <tbody>
                   {
                     this.state.tasks.map(task => {
                       return (
                         <tr key={task._id}>
-                        
                           <td>{task.informacionContacto}</td>
                           <td>{task.resumen}</td>
                           <td>{task.educacion}</td>
@@ -206,15 +209,14 @@ class Pdf extends Component {
                           <td>{task.habilidades}</td>
                           <td>{task.idiomas}</td>
                           <td>
-                        
                             <button onClick={() => this.deleteTask(task._id)} className="btn light-blue darken-4">
                               <i className="material-icons">delete</i>
                             </button>
                             <button onClick={() => this.editTask(task._id)} className="btn light-blue darken-4" style={{ margin: '4px' }}>
                               <i className="material-icons">edit</i>
                             </button>
-                            <button onClick={() => this.editTask(task._id)} className="btn light-blue darken-4" style={{ margin: '4px' }}>
-                              <i className="material-icons">picture_as_pdf</i>
+                            <button className="btn light-blue darken-4" style={{ margin: '4px' }}>
+                            <Link to="/pdf"><i className="material-icons">picture_as_pdf</i></Link>
                             </button>
 
                           </td>
@@ -233,4 +235,4 @@ class Pdf extends Component {
   }
 }
 
-export default Pdf;
+export default Formularios;
