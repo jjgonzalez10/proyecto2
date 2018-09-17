@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+/*
 import {
   BrowserRouter as Router,
   Route,
   Link,
   Switch
-} from 'react-router-dom'
+} from 'react-router-dom' unused imports*/
 
 
 class Formularios extends Component {
