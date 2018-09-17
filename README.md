@@ -53,9 +53,11 @@ Steps:
 
 3)If you want to run the application you have to follow the next steps
 
+     -npm install jspdf --save
     - npm run webpack
 
     - npm run dev
+    
 
 
 Licensed under the [MIT License](LICENSE).
