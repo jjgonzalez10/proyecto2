@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
-import {
-    BrowserRouter as Router,
-    Route,
-    Link,
-    Switch
-  } from 'react-router-dom'
-  import Formularios from './Formularios';
+import { Link } from 'react-router-dom';
+import Formularios from './Formularios';
 
 class Login extends Component {
 
@@ -30,7 +25,15 @@ class Login extends Component {
         [name]: value
       });
     }
-  
+    /*Moved up, it may cuase confusion calling it before declaring it on the component*/
+    fetchTasks() {
+      fetch('/api/cliente')
+        .then(res => res.json())
+        .then(data => {
+          this.setState({ tasks: data });
+          console.log(this.state.tasks);
+        });
+    }
   
     addTask(e) {
       e.preventDefault();
@@ -68,7 +71,7 @@ class Login extends Component {
             console.log(data);
             window.M.toast({ html: 'Usuario guardado' });
             this.setState({ primerNombre: '', apellido: '', email: '', contraseña: '' });
-            this.fetchTasks();
+            //this.fetchTasks(); //Creating a new user should not modify tasks
           })
           .catch(err => console.error(err));
       }
@@ -93,6 +96,7 @@ class Login extends Component {
       }
     }
   
+    //Why editTask? request method is not PUT and no body/headers are sent
     editTask(id) {
       fetch(`/api/cliente/${id}`)
         .then(res => res.json())
@@ -111,15 +115,6 @@ class Login extends Component {
   
     componentDidMount() {
       this.fetchTasks();
-    }
-  
-    fetchTasks() {
-      fetch('/api/cliente')
-        .then(res => res.json())
-        .then(data => {
-          this.setState({ tasks: data });
-          console.log(this.state.tasks);
-        });
     }
   
     render() {
@@ -166,7 +161,8 @@ class Login extends Component {
                       <button type="submit" className="btn light-blue darken-4" >
                         Registrarse
                       </button>
-                      <span> </span>
+                      {/*???*/}
+                      {/*<span> </span>*/}
                       <button className="btn light-blue darken-4" >
                         <Link to="/formularios"> Entrar</Link>
                       </button>
