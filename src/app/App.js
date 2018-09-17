@@ -5,8 +5,8 @@ import React, { Component } from 'react';
 import {
   BrowserRouter as Router,
   Route,
-  Link,
-  Switch
+  Link
+  /*Switch remove unused import*/
 } from 'react-router-dom'
 
 import Login from './Login';

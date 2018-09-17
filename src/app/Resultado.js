@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import {
+/*import {
     BrowserRouter as Router,
     Route,
     Link,
     Switch
-  } from 'react-router-dom'
+  } from 'react-router-dom'*/
   
 
 class Resultado extends Component {
@@ -22,6 +22,7 @@ class Resultado extends Component {
               </div>
             </div>
           </nav>
+          {/*No onClick() event*/}
           <button className="btn light-blue darken-4" id="pdfd">
               Descargar pdf
           </button>

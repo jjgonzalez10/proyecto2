@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+/*
 import {
   BrowserRouter as Router,
   Route,
   Link,
   Switch
-} from 'react-router-dom'
+} from 'react-router-dom' unused imports*/
 
 
 class Formularios extends Component {
@@ -264,6 +265,7 @@ class Formularios extends Component {
                             <button onClick={() => this.deleteTask(task._id)} className="btn light-blue darken-4">
                               <i className="material-icons">delete</i>
                             </button>
+                            {/*Avoid using inline styles, use className and add a css rule*/}
                             <button onClick={() => this.editTask(task._id)} className="btn light-blue darken-4" style={{ margin: '4px' }}>
                               <i className="material-icons">edit</i>
                             </button>

@@ -4,8 +4,8 @@ import { render } from 'react-dom';
 import {
   BrowserRouter as Router,
   Route,
-  Link,
-  Switch
+  /*Link,
+  Switch unused imports*/
 } from 'react-router-dom'
 
 
