@@ -53,6 +53,7 @@ Steps:
 
 3)If you want to run the application you have to follow the next steps
 
+    - npm install --save-dev webpack
      -npm install jspdf --save
     - npm run webpack
 
