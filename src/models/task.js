@@ -5,7 +5,7 @@ const TaskSchema = new Schema({
   informacionContacto: { type: String, required: true },
   resumen: { type: String, required: true },
   educacion: { type: String, required: true },
-  experiencia: { type: String, required: true },
+  experiencia: { type: String, required: true},
   habilidades: { type: String, required: true },
   idiomas: { type: String, required: true }
 });

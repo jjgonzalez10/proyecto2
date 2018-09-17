@@ -6,6 +6,7 @@ import {
   Switch
 } from 'react-router-dom'
 
+
 class Formularios extends Component {
 
   constructor() {
@@ -34,6 +35,7 @@ class Formularios extends Component {
 
 
   addTask(e) {
+
     e.preventDefault();
     if (this.state._id) {
       fetch(`/api/formularios/${this.state._id}`, {
@@ -54,7 +56,7 @@ class Formularios extends Component {
         .then(res => res.json())
         .then(data => {
           window.M.toast({ html: 'Hoja de vida actualizada' });
-          this.setState({ _id: '', informacionContacto: '', resumen: '', educacion: '', experiencia: '', habilidades: '', idiomas: '' });
+          
           this.fetchTasks();
         });
     } else {
@@ -70,7 +72,6 @@ class Formularios extends Component {
         .then(data => {
           console.log(data);
           window.M.toast({ html: 'Hoja de vida guardada' });
-          this.setState({ informacionContacto: '', resumen: '', educacion: '', experiencia: '', habilidades: '', idiomas: '' });
           this.fetchTasks();
         })
         .catch(err => console.error(err));
@@ -127,6 +128,57 @@ class Formularios extends Component {
       });
   }
 
+  
+  genPDF()
+  {
+    
+    var doc = new jsPDF();
+    doc.setFontSize(22)
+    doc.setFontType('bold')
+    doc.text(70,20,this.state.informacionContacto);
+
+    doc.setFontType('bold')
+    doc.setFontSize(20)
+    doc.text(20,40,"Resumen")
+    doc.setFontSize(12)
+    doc.setFontType('normal')
+    doc.text(20,50,this.state.resumen)
+
+    doc.setFontType('bold')
+    doc.setFontSize(20)
+    doc.text(20,80,"Educación")
+    doc.setFontSize(12)
+    doc.setFontType('normal')
+    doc.text(20,90,this.state.educacion)
+
+    doc.setFontType('bold')
+    doc.setFontSize(20)
+    doc.text(20,120,"Experiencia")
+    doc.setFontSize(12)
+    doc.setFontType('normal')
+    doc.text(20,130,this.state.experiencia)
+
+    doc.setFontType('bold')
+    doc.setFontSize(20)
+    doc.text(20,160,"Habilidades")
+    doc.setFontSize(12)
+    doc.setFontType('normal')
+    doc.text(20,170,this.state.habilidades)
+
+    doc.setFontType('bold')
+    doc.setFontSize(20)
+    doc.text(20,200,"Idiomas")
+    doc.setFontSize(12)
+    doc.setFontType('normal')
+    doc.text(20,210,this.state.idiomas)
+
+
+
+
+    doc.save("cv.pdf")
+
+    }
+
   render() {
     return (
       <div>
@@ -134,7 +186,7 @@ class Formularios extends Component {
         <nav className="light-blue darken-4">
           <div className="container">
             <div className="nav-wrapper">
-              <a href="#" className="brand-logo">Hoja de vida</a>
+              <a href="#" className="brand-logo">Welcome to PdfCv</a>
             </div>
           </div>
         </nav>
@@ -215,8 +267,8 @@ class Formularios extends Component {
                             <button onClick={() => this.editTask(task._id)} className="btn light-blue darken-4" style={{ margin: '4px' }}>
                               <i className="material-icons">edit</i>
                             </button>
-                            <button className="btn light-blue darken-4" style={{ margin: '4px' }}>
-                            <Link to="/pdf"><i className="material-icons">picture_as_pdf</i></Link>
+                            <button onClick={() => this.genPDF()} className="btn light-blue darken-4" style={{ margin: '4px' }}>
+                            <i className="material-icons">picture_as_pdf</i>
                             </button>
 
                           </td>

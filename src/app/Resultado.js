@@ -22,7 +22,7 @@ class Resultado extends Component {
               </div>
             </div>
           </nav>
-          <button className="btn light-blue darken-4">
+          <button className="btn light-blue darken-4" id="pdfd">
               Descargar pdf
           </button>
         </div>

@@ -10,7 +10,6 @@ import {
 
 
 import App from './App';
-import Login from './Login';
 import Resultado from './Resultado';
 import Formularios from './Formularios';
 

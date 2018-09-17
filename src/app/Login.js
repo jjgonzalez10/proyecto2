@@ -150,22 +150,23 @@ class Login extends Component {
                       </div>
                       <div className="row">
                         <div className="input-field col s12">
-                          <input name="apellido" onChange={this.handleChange} value={this.state.apellido} type="text" placeholder="Apellido" autoFocus />
+                          <input name="apellido" onChange={this.handleChange} value={this.state.apellido} type="text" placeholder="Apellido"  />
                         </div>
                       </div>
                       <div className="row">
                         <div className="input-field col s12">
-                          <input name="email" onChange={this.handleChange} value={this.state.email} type="text" placeholder="Email" autoFocus />
+                          <input name="email" onChange={this.handleChange} value={this.state.email} type="text" placeholder="Email"  />
                         </div>
                       </div>
                       <div className="row">
                         <div className="input-field col s12">
-                          <input name="contraseña" onChange={this.handleChange} value={this.state.contraseña} type="text" placeholder="Contraseña" autoFocus />
+                          <input name="contraseña" onChange={this.handleChange} value={this.state.contraseña} type="password" placeholder="Contraseña"  />
                         </div>
                       </div>
                       <button type="submit" className="btn light-blue darken-4" >
-                        Registrarse
+                        <Link to ="/">Registrarse</Link>
                       </button>
+                      <span> </span>
                       <button className="btn light-blue darken-4" >
                         <Link to="/formularios"> Entrar</Link>
                       </button>
