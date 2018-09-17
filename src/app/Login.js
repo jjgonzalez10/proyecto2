@@ -164,7 +164,7 @@ class Login extends Component {
                         </div>
                       </div>
                       <button type="submit" className="btn light-blue darken-4" >
-                        <Link to ="/">Registrarse</Link>
+                        Registrarse
                       </button>
                       <span> </span>
                       <button className="btn light-blue darken-4" >
